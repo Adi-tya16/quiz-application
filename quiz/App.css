@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.quiz-container {
+  background-color: #fff;
+  margin-top: 40px;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 400px;
+  max-width: 90vw;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.progress {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.question {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.option-label {
+  background-color: #f9f9f9;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.option-label:hover {
+  border-color: #007bff;
+}
+
+.option-label.selected {
+  border-color: #007bff;
+  background-color: #e7f1ff;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+.submit-btn,
+.next-btn,
+.restart-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:disabled {
+  background-color: #a0c8ff;
+  cursor: not-allowed;
+}
+
+.submit-btn:hover:not(:disabled),
+.next-btn:hover,
+.restart-btn:hover {
+  background-color: #0056b3;
+}
+
+.feedback {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.feedback.correct {
+  color: #28a745;
+}
+
+.feedback.incorrect {
+  color: #dc3545;
+}
+
+.result-section {
+  text-align: center;
+}
+
+.result-section h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.result-section p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #555;
+}
